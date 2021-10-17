@@ -2,7 +2,7 @@
   "name": "back-end--Ignite",
   "version": "1.0.0",
   "repositório": "git@github.com:jefim9413/back-end--Ignite.git",
-  "autor": "Jefferson Marques <jefferson.jsm3444@gmail.com>",
+  "author": "Jefferson Marques <jefferson.jsm3444@gmail.com>",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
