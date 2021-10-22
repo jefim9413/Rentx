@@ -8,6 +8,7 @@ interface ICreateSpecificationDTO {
 interface ISpecificationsRepository {
   // eslint-disable-next-line no-unused-vars
   create({ name, description }: ICreateSpecificationDTO): void;
+  // eslint-disable-next-line no-unused-vars
   findByName(name: string): Specification;
 }
 

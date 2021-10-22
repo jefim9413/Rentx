@@ -21,9 +21,9 @@ class SpecificationsRepository implements ISpecificationsRepository {
   }
 
   findByName(name: string): Specification {
-    const specification = this.specifications.find(
-      (specification) => specification.name === name,
-    );
+    // eslint-disable-next-line no-shadow
+    const specification = this.specifications.find((specification) => specification.name === name)!;
+    return specification;
   }
 }
 
