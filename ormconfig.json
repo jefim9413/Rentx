@@ -1,3 +1,8 @@
 {
-
+  "type": "mongodb",
+  "host": "localhost",
+  "database": "rentx",
+  "synchronize": true,
+  "logging": false,
+  "useUnifiedTopology": true
 }
