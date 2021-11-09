@@ -3,11 +3,11 @@ import { v4 as uuidV4 } from 'uuid';
 class Specification {
   id?: string;
 
-  name: string | undefined;
+  name!: string;
 
-  description: string | undefined;
+  description!: string;
 
-  created_at: Date | undefined;
+  created_at!: Date;
 
   constructor() {
     if (!this.id) {
