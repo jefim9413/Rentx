@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 /* eslint-disable no-undef */
 import fs from 'fs';
 import csvParse from 'csv-parse';
@@ -14,7 +15,6 @@ class ImportCategoryUseCase {
     this.categoryRepository = categoryRepository;
   }
 
-  // eslint-disable-next-line class-methods-use-this
   loadCategories(file: Express.Multer.File):Promise<IImportCategory[]> {
     return new Promise((resolve, reject) => {
       const stream = fs.createReadStream(file.path);

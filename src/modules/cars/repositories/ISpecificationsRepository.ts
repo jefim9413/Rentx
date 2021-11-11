@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Specification } from '../entities/Specification';
 
 interface ICreateSpecificationDTO {
@@ -6,10 +7,8 @@ interface ICreateSpecificationDTO {
 }
 
 interface ISpecificationsRepository {
-  // eslint-disable-next-line no-unused-vars
-  create({ name, description }: ICreateSpecificationDTO): void;
-  // eslint-disable-next-line no-unused-vars
-  findByName(name: string): Specification;
+  create({ name, description }: ICreateSpecificationDTO): Promise<void>;
+  findByName(name: string): Promise<Specification>;
 }
 
 export { ISpecificationsRepository, ICreateSpecificationDTO };
