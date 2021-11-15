@@ -11,8 +11,8 @@ class User {
   @Column()
     name!: string;
 
-    @Column()
-      email!: string;
+  @Column()
+    email!: string;
 
   @Column()
     password!: string;
