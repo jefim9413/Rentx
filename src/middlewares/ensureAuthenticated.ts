@@ -1,7 +1,12 @@
-import { Request, Response } from 'express';
+/* eslint-disable max-len */
+import { NextFunction, Request, Response } from 'express';
 import { verify } from 'jsonwebtoken';
+import { UsersRepository } from '../modules/accounts/repositories/implementations/UsersRepository';
 
-export async function ensureAuthenticated(request: Request, response: Response, next: NextFunction): Promise<void> {
+interface IPayload {
+  sub: string;
+}
+export async function ensureAuthenticated(request: Request, response: Response, next: NextFunction) {
   const authHeader = request.headers.authorization;
 
   if (!authHeader) {
@@ -10,7 +15,12 @@ export async function ensureAuthenticated(request: Request, response: Response, 
   const [, token] = authHeader.split(' ');
 
   try {
-    verify(token, '38b50437cb37dd2c85ab51bfa8fea609');
+    const { sub } = verify(token, '38b50437cb37dd2c85ab51bfa8fea609') as IPayload;
+    const usersRepository = new UsersRepository();
+    const user = await usersRepository.findById(sub);
+    if (!user) {
+      throw new Error('User does not exist!');
+    }
     next();
   } catch {
     throw new Error('Invalid token');
