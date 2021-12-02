@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
-import { AppError } from '../../../../errors/AppError';
-import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
-import { UsersRepositoryInMemory } from '../../repositories/in-memory/UsersRepositoryInMemory';
+import { AppError } from '@errors/AppError';
+import { UsersRepositoryInMemory } from '@modules/accounts/repositories/in-memory/UsersRepositoryInMemory';
+import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
 import { CreateUserUseCase } from '../createUser/CreateUseCase';
 import { AuthenticateUserUseCase } from './AuthenticateUserUseCase';
 
