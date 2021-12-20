@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
-
-import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
-import { User } from '@modules/accounts/entities/User';
+import { User } from '../entities/User';
+import { ICreateUserDTO } from '../dtos/ICreateUserDTO';
 
 interface IUsersRepository {
   create(data: ICreateUserDTO) : Promise<void>;

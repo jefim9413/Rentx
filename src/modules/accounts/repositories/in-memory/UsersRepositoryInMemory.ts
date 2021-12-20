@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
-import { User } from '@modules/accounts/entities/User';
-import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
+import { User } from '../../entities/User';
+import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
 import { IUsersRepository } from '../IUsersRepository';
 
 class UsersRepositoryInMemory implements IUsersRepository {

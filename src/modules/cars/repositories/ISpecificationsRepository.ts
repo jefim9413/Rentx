@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Specification } from '@modules/cars/entities/Specification';
+import { Specification } from '../entities/Specification';
 
 interface ICreateSpecificationDTO {
   name: string;

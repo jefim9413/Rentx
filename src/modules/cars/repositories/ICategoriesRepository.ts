@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Category } from '@modules/cars/entities/Category';
+import { Category } from '../entities/Category';
 
 interface ICreateCategoryDTO {
   name: string;
