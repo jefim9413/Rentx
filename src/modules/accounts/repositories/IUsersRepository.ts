@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { User } from '../entities/User';
+import { User } from '../infra/typeorm/entities/User';
 import { ICreateUserDTO } from '../dtos/ICreateUserDTO';
 
 interface IUsersRepository {
