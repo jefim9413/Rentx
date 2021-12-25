@@ -52,9 +52,6 @@ O usuário responsável pelo cadastro deve ser um usuário administrador.
 **RF**
 Deve ser possível cadastrar um aluguel.
 
-
-**RNF**
-
 **RN**
 O aluguel deve ter duração mínima de uma 24 horas.
 Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.
