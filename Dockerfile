@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 
 WORKDIR /usr/app
 
@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 3333
 
-CMD ["yarn","dev:server"]
+CMD ["npm","run","dev:server"]
